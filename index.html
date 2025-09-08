@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetterMancera - Soluciones PrÃ¡cticas para tu Hogar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'betterware-blue': '#00AEEF',
+                        'betterware-mint': '#3ED6B5',
+                        'betterware-yellow': '#FFD700',
+                        'betterware-green': '#00C851',
+                        'betterware-dark': '#333333',
+                        'betterware-gray': '#F5F5F5'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-r from-betterware-blue to-betterware-mint rounded-full flex items-center justify-center">
+<img src="images/logoB.png" alt="Productos de Cocina" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shrink-0" onerror="this.style.display='none'; this.nextElementSibling?.style?.display='flex'">
+
+
+                     
+                    </div>
+                    <span class="text-2xl font-bold text-betterware-dark">BetterMancera</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-betterware-dark hover:text-betterware-blue transition-colors">Inicio</a>
+                    <a href="#catalogo" class="text-betterware-dark hover:text-betterware-blue transition-colors">CatÃ¡logo</a>
+                    <a href="#organizacion" class="text-betterware-dark hover:text-betterware-blue transition-colors">OrganizaciÃ³n</a>
+                    <a href="#cocina" class="text-betterware-dark hover:text-betterware-blue transition-colors">Cocina</a>
+                    <a href="#limpieza" class="text-betterware-dark hover:text-betterware-blue transition-colors">Limpieza</a>
+                    <a href="#asociado" class="text-betterware-dark hover:text-betterware-blue transition-colors">Asociado</a>
+                    <a href="#oportunidades" class="text-betterware-dark hover:text-betterware-blue transition-colors">Oportunidades</a>
+                    <a href="#contacto" class="text-betterware-dark hover:text-betterware-blue transition-colors">Contacto</a>
+                    
+
+                </div>
+
+                <button class="md:hidden text-betterware-dark" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#inicio" class="text-betterware-dark hover:text-betterware-blue transition-colors">Inicio</a>
+                    <a href="#catalogo" class="text-betterware-dark hover:text-betterware-blue transition-colors">CatÃ¡logo</a>
+                    <a href="#organizacion" class="text-betterware-dark hover:text-betterware-blue transition-colors">OrganizaciÃ³n</a>
+                    <a href="#cocina" class="text-betterware-dark hover:text-betterware-blue transition-colors">Cocina</a>
+                    <a href="#limpieza" class="text-betterware-dark hover:text-betterware-blue transition-colors">Limpieza</a>
+                    <a href="#asociado" class="text-betterware-dark hover:text-betterware-blue transition-colors">Asociado</a>
+                    <a href="#oportunidades" class="text-betterware-dark hover:text-betterware-blue transition-colors">Oportunidades</a>
+                    <a href="#contacto" class="text-betterware-dark hover:text-betterware-blue transition-colors">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="py-20" style="background: linear-gradient(135deg, #00AEEF 0%, #3ED6B5 100%)">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-5xl font-bold mb-6">Transforma tu hogar con <span class="text-yellow-200">BetterMancera</span></h1>
+                    <p class="text-xl mb-8 opacity-90">Productos prÃ¡cticos y modernos que hacen tu vida mÃ¡s fÃ¡cil. Desde organizaciÃ³n hasta limpieza, tenemos todo lo que necesitas.</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="scrollToSection('catalogo')" class="bg-white text-betterware-blue px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                            <i class="fas fa-book mr-2"></i>Ver CatÃ¡logo
+                        </button>
+                        <a href="https://wa.me/524772233286" target="_blank" class="bg-betterware-green text-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 transition-colors shadow-lg text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Contactar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-white/20 backdrop-blur-sm rounded-3xl p-8">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                                <i class="fas fa-handshake text-3xl text-betterware-blue mb-3"></i>
+                                <h3 class="font-semibold text-betterware-dark">¿Quieres ser distribuidor?</h3>
+                                <a href="#contacto" class="text-sm font-semibold text-betterware-blue hover:text-betterware-mint transition-colors">Haz clic aquí</a>
+                            </div>
+                            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                                <i class="fas fa-bag-shopping text-3xl text-betterware-mint mb-3"></i>
+                                <h3 class="font-semibold text-betterware-dark">¿Quieres vender?</h3>
+                                <a href="#contacto" class="text-sm font-semibold text-betterware-blue hover:text-betterware-mint transition-colors">Haz clic aquí</a>
+                            </div>
+                            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                                <i class="fas fa-tags text-3xl text-betterware-green mb-3"></i>
+                                <h3 class="font-semibold text-betterware-dark">¿Quieres comprar con descuento?</h3>
+                                <a href="#asociado" class="text-sm font-semibold text-betterware-blue hover:text-betterware-mint transition-colors">Haz clic aquí</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Distribuidores Section -->
+    <section class="py-16 bg-betterware-gray">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-betterware-dark mb-4">Tus Distribuidores de Confianza</h2>
+                <p class="text-gray-600 text-lg">Conoce a nuestro equipo comprometido con tu satisfacciÃ³n</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                    <!-- Espacio para imagen del distribuidor -->
+                    <div class="w-20 h-20 bg-gradient-to-r from-betterware-blue to-betterware-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                         <img src="images\carlos.jpeg" alt="Carlos Fernando" class="w-20 h-20 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"> 
+                    </div>
+                    <h3 class="text-xl font-bold text-betterware-dark mb-2">Carlos Fernando Mancera GÃ³mez</h3>
+                    <p class="text-gray-600 mb-4">Distribuidor Autorizado</p>
+                    <p class="text-sm text-gray-600">Experto en productos para el hogar con mÃ¡s de 5 aÃ±os de experiencia ayudando a familias a mejorar su calidad de vida.</p>
+                    
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                    <!-- Espacio para imagen del distribuidor -->
+                    <div class="w-20 h-20 bg-gradient-to-r from-betterware-mint to-betterware-green rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img src="images\carina.jpeg" alt="Carina GÃ³mez" class="w-20 h-20 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"> 
+                        
+                    </div>
+                    <h3 class="text-xl font-bold text-betterware-dark mb-2">Carina GÃ³mez Rangel</h3>
+                    <p class="text-gray-600 mb-4">Distribuidora Autorizada</p>
+                    <p class="text-sm text-gray-600">Especialista en organizaciÃ³n del hogar, siempre dispuesta a encontrar la soluciÃ³n perfecta para cada necesidad.</p>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CatÃ¡logo Section -->
+    <section id="catalogo" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-betterware-dark mb-4">CatÃ¡logo Actualizado</h2>
+                <p class="text-gray-600 text-lg">Descubre nuestros productos mÃ¡s nuevos cada mes</p>
+            </div>
+
+            <div class="rounded-3xl p-8 text-white text-center mb-12" style="background: linear-gradient(135deg, #00AEEF 0%, #3ED6B5 100%)">
+                <h3 class="text-2xl font-bold mb-4">CatÃ¡logo de Septiembre 2025</h3>
+                <p class="text-lg mb-6 opacity-90">Â¡Nuevos productos para cerrar el aÃ±o organizando tu hogar!</p>
+               <a href="catalogos/catalogosept2508.pdf" target="_blank" rel="noopener" download class="bg-white text-betterware-blue px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                 <i class="fas fa-download mr-2"></i>Descargar CatÃ¡logo PDF </a>
+                   
+                </button>
+            </div>
+
+
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div id="organizacion" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Espacio para imagen de categorÃ­a -->
+                    <div class="bg-gradient-to-br from-blue-400 to-blue-600 h-48 flex items-center justify-center relative">
+                       <img src="https://i.ytimg.com/vi/q6mlenhz50Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCYXC1P2cx3ebLkwjX5alrrTQ25YA"alt="Productos de OrganizaciÃ³n" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-betterware-dark mb-3">OrganizaciÃ³n</h3>
+                        <p class="text-gray-600 mb-4">Cajas, contenedores y organizadores que transforman cualquier espacio en un lugar ordenado y funcional.</p>
+                        <button onclick="showProducts('organizacion')" class="text-betterware-blue font-semibold hover:text-betterware-mint transition-colors">
+                            Ver productos <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="cocina" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Espacio para imagen de categorÃ­a -->
+                    <div class="bg-gradient-to-br from-orange-400 to-red-500 h-48 flex items-center justify-center relative">
+                        <img src="https://cdn.shopify.com/s/files/1/0853/3114/9100/files/5627-Web_Septiembre_2025..jpg?v=1756470372"alt="Productos de Cocina" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"> 
+                    
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-betterware-dark mb-3">Cocina</h3>
+                        <p class="text-gray-600 mb-4">Utensilios innovadores que hacen que cocinar sea mÃ¡s fÃ¡cil, rÃ¡pido y divertido para toda la familia.</p>
+                        <button onclick="showProducts('cocina')" class="text-betterware-blue font-semibold hover:text-betterware-mint transition-colors">
+                            Ver productos <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="limpieza" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Espacio para imagen de categorÃ­a -->
+                    <div class="bg-gradient-to-br from-green-400 to-teal-500 h-48 flex items-center justify-center relative">
+                         <img src="https://i.ytimg.com/vi/4dMQd3wRWcY/maxresdefault.jpg"
+ alt="Productos de Limpieza" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"> 
+                        
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-betterware-dark mb-3">Limpieza</h3>
+                        <p class="text-gray-600 mb-4">Productos de limpieza eficaces y herramientas que mantienen tu hogar impecable sin esfuerzo.</p>
+                        <button onclick="showProducts('limpieza')" class="text-betterware-blue font-semibold hover:text-betterware-mint transition-colors">
+                            Ver productos <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Asociado Section -->
+    <section id="asociado" class="py-16" style="background: linear-gradient(135deg, #00AEEF 0%, #3ED6B5 100%)">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 text-white">
+                <h2 class="text-3xl font-bold mb-4">Ser Asociado</h2>
+                <p class="text-lg opacity-90">Compra con descuento y suma beneficios</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Ventajas Asociado -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-betterware-dark mb-4">Ventajas de Asociado</h3>
+                    <ul class="space-y-2 text-gray-700 list-disc pl-5">
+                        <li>Compra de productos a precio especial</li>
+                        <li>Inscripción gratis</li>
+                        <li>Entrega a domicilio</li>
+                        <li>Catálogos gratis</li>
+                        <li>Ganancias por ventas</li>
+                        <li>Puntos canjeables por premios</li>
+                        <li>Oportunidad de crecimiento</li>
+                        <li>Producto sorpresa a precio de regalo en cada pedido</li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="https://wa.me/524772233286" target="_blank" class="inline-flex items-center bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition-colors">
+                            <i class="fab fa-whatsapp mr-2"></i>Quiero ser Asociado
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ventajas Distribuidor -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-betterware-dark mb-4">Ventajas de Distribuidor</h3>
+                    <ul class="space-y-2 text-gray-700 list-disc pl-5">
+                        <li>Es el líder de un grupo de asociados</li>
+                        <li>Crédito de 14 días</li>
+                        <li>Entrega a domicilio</li>
+                        <li>Comisiones semanales</li>
+                        <li>Puntos canjeables por premios y viajes</li>
+                        <li>Oportunidad de construir tu propio negocio</li>
+                        <li>Beneficios de Asociado adicionales</li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="#contacto" class="inline-flex items-center bg-betterware-blue text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-colors">
+                            <i class="fas fa-handshake mr-2"></i>Quiero ser Distribuidor
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Oportunidades -->
+    <section id="oportunidades" class="py-16" style="background: linear-gradient(135deg, #0a0a0a 0%, #111111 60%, #000000 100%)">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white mb-8">
+                <h2 class="text-3xl font-bold mb-3"><span class="text-yellow-400">Catálogo</span> de Oportunidades</h2>
+                <p class="text-lg opacity-90">Programas para Asociados y Distribuidores</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto text-center bg-white/5 backdrop-blur-sm rounded-3xl border border-yellow-500/30 p-8 shadow-2xl">
+                <p class="text-white/90 mb-6">El Catálogo de Oportunidades de Betterware resume los programas, incentivos y herramientas vigentes para crecer tu red y tus ingresos. Explóralo para saber qué puedes ganar y cómo participar.</p>
+                <a id="oppDownloadBtn" href="catalogos/Cat._Oportunidades_2-2025IG.pdf" target="_blank" rel="noopener" download class="inline-flex items-center bg-yellow-500 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 transition-colors shadow-lg" aria-label="Descargar Catálogo de Oportunidades">
+                    <i class="fas fa-download mr-2"></i>
+                    Descargar Catálogo de Oportunidades (PDF)
+                </a>
+            </div>
+        </div>
+             <div class="max-w-6xl mx-auto mt-10">
+                <div class="flex justify-center gap-3 mb-6">
+                    <button id="btnProg" class="px-5 py-2 rounded-full bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition-colors" onclick="renderOportunidades('programas')">Ver Programas</button>
+                    <button id="btnPrem" class="px-5 py-2 rounded-full bg-white/10 text-white font-semibold hover:bg-white/20 transition-colors" onclick="renderOportunidades('premios')">Ver Premios</button>
+                </div>
+                <div id="oportunidadesContent" class="grid md:grid-cols-2 gap-6"></div>
+            </div>   </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-betterware-dark mb-4">¡Contáctanos!</h2>
+                <p class="text-gray-600 text-lg">Estamos aquÃ­ para ayudarte con cualquier duda o pedido</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- InformaciÃ³n de Contacto -->
+                <div class="space-y-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl font-bold text-betterware-dark mb-6">Contacto Directo</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-whatsapp text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-betterware-dark">WhatsApp</p>
+                                    <a href="https://wa.me/524772233286" class="text-betterware-blue hover:text-betterware-mint transition-colors">477-223-3286</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-betterware-blue rounded-full flex items-center justify-center">
+                                    <i class="fab fa-facebook-messenger text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-betterware-dark">Messenger</p>
+                                    <p class="text-gray-600">BÃºscanos en Facebook</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-betterware-mint rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-betterware-dark">Email</p>
+                                    <p class="text-gray-600">Usa el formulario aquÃ­ al lado</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <h4 class="font-semibold text-betterware-dark mb-3">Horarios de AtenciÃ³n</h4>
+                            <p class="text-gray-600 text-sm">Lunes a Viernes: 9:00 AM - 7:00 PM</p>
+                            <p class="text-gray-600 text-sm">SÃ¡bados: 9:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/524772233286" target="_blank" class="block bg-green-500 text-white text-center py-4 rounded-2xl font-semibold hover:bg-green-600 transition-colors shadow-lg">
+                        <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                        Chatear por WhatsApp
+                    </a>
+                </div>
+
+                <!-- Formulario -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-betterware-dark mb-6">Envíanos un Mensaje</h3>
+                    <div id="formAlert" class="hidden mb-4 rounded-lg p-3 text-sm" role="status" aria-live="polite"></div>
+                    
+                    <form id="contactForm" action="https://formspree.io/f/mblaopav" method="POST" class="space-y-6" novalidate>
+                        <div>
+                            <label class="block text-betterware-dark font-semibold mb-2">Nombre Completo</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-betterware-blue focus:border-transparent outline-none transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-betterware-dark font-semibold mb-2">TelÃ©fono</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-betterware-blue focus:border-transparent outline-none transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-betterware-dark font-semibold mb-2">Email</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-betterware-blue focus:border-transparent outline-none transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-betterware-dark font-semibold mb-2">Â¿En quÃ© te podemos ayudar?</label>
+                            <select name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-betterware-blue focus:border-transparent outline-none transition-colors">
+                                <option value=">Selecciona una opciÃ³n</option>
+                                <option value="catalogo">Quiero el catÃ¡logo actualizado</option>
+                                <option value="productos">InformaciÃ³n sobre productos</option>
+                                <option value="distribuidor">Quiero ser distribuidor</option>
+                                <option value="pedido">Hacer un pedido</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-betterware-dark font-semibold mb-2">Mensaje</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-betterware-blue focus:border-transparent outline-none transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button id="contactSubmit" type="submit" class="w-full text-white py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg" style="background: linear-gradient(135deg, #00AEEF 0%, #3ED6B5 100%); hover:opacity-90">
+                            <i class="fas fa-paper-plane mr-2"></i>Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-betterware-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-betterware-blue to-betterware-mint rounded-full flex items-center justify-center">
+<img src="images/logoB.png" alt="Productos de Cocina" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shrink-0" onerror="this.style.display='none'; this.nextElementSibling?.style?.display='flex'">
+
+
+                        </div>
+                        <span class="text-xl font-bold">BetterMancera</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Transformando hogares con productos prÃ¡cticos y funcionales desde hace mÃ¡s de 25 aÃ±os.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Productos</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#organizacion" class="hover:text-betterware-blue transition-colors">OrganizaciÃ³n</a></li>
+                        <li><a href="#cocina" class="hover:text-betterware-blue transition-colors">Cocina</a></li>
+                        <li><a href="#limpieza" class="hover:text-betterware-blue transition-colors">Limpieza</a></li>
+                        <li><a href="#catalogo" class="hover:text-betterware-blue transition-colors">CatÃ¡logo</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Oportunidades</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#contacto" class="hover:text-betterware-blue transition-colors">Ser Distribuidor</a></li>
+                        <li><a href="#contacto" class="hover:text-betterware-blue transition-colors">CapacitaciÃ³n</a></li>
+                        <li><a href="#contacto" class="hover:text-betterware-blue transition-colors">Soporte</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>+52 477-223-3286</li>
+                        <li>Carlos Fernando Mancera GÃ³mez</li>
+                        <li>Carina GÃ³mez Rangel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 BetterMancera. Distribuidores autorizados. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bot de Soporte IA -->
+    <div id="chatBot" class="fixed bottom-6 right-6 z-50">
+        <!-- BotÃ³n del Chat -->
+        <button id="chatToggle" onclick="toggleChat()" class="bg-gradient-to-r from-betterware-blue to-betterware-mint text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse">
+            <i id="chatIcon" class="fas fa-robot text-2xl"></i>
+        </button>
+
+        <!-- Ventana del Chat -->
+        <div id="chatWindow" class="hidden absolute bottom-20 right-0 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+            <!-- Header del Chat -->
+            <div class="bg-gradient-to-r from-betterware-blue to-betterware-mint text-white p-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-robot text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Asistente BetterMancera</h3>
+                            <p class="text-xs opacity-90">En lÃ­nea Respuesta inmediata</p>
+                        </div>
+                    </div>
+                    <button onclick="toggleChat()" class="text-white hover:bg-white/20 rounded-full p-1">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ãrea de Mensajes -->
+            <div id="chatMessages" class="h-80 overflow-y-auto p-4 space-y-3 bg-gray-50">
+                <div class="flex items-start space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-r from-betterware-blue to-betterware-mint rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-robot text-white text-xs"></i>
+                    </div>
+                    <div class="bg-white rounded-lg p-3 shadow-sm max-w-xs">
+                        <p class="text-sm text-gray-800">¡Hola! Soy tu asistente virtual de BetterMancera. En que puedo ayudarte hoy?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opciones RÃ¡pidas -->
+            <div id="quickOptions" class="p-4 border-t border-gray-200 bg-white">
+                <p class="text-xs text-gray-600 mb-3">Opciones rÃ¡pidas:</p>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="sendQuickMessage('catalogo')" class="bg-gray-100 hover:bg-gray-200 text-xs p-2 rounded-lg transition-colors">
+                        Ver CatÃ¡logo
+                    </button>
+                    <button onclick="sendQuickMessage('productos')" class="bg-gray-100 hover:bg-gray-200 text-xs p-2 rounded-lg transition-colors">
+                        Productos
+                    </button>
+                    <button onclick="sendQuickMessage('precios')" class="bg-gray-100 hover:bg-gray-200 text-xs p-2 rounded-lg transition-colors">
+                        Precios
+                    </button>
+                    <button onclick="sendQuickMessage('distribuidor')" class="bg-gray-100 hover:bg-gray-200 text-xs p-2 rounded-lg transition-colors">
+                        Ser Distribuidor
+                    </button>
+                </div>
+            </div>
+
+            <!-- Input de Mensaje -->
+            <div class="p-4 border-t border-gray-200 bg-white">
+                <div class="flex space-x-2">
+                    <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." class="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-betterware-blue focus:border-transparent outline-none" onkeypress="handleEnter(event)">
+                    <button onclick="sendMessage()" class="bg-gradient-to-r from-betterware-blue to-betterware-mint text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                        <i class="fas fa-paper-plane text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Productos -->
+    <div id="productsModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <!-- Header del Modal -->
+            <div class="bg-gradient-to-r from-betterware-blue to-betterware-mint text-white p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 id="modalTitle" class="text-2xl font-bold">Productos de OrganizaciÃ³n</h2>
+                        <p class="opacity-90">Descubre nuestra selecciÃ³n especial</p>
+                    </div>
+                    <button onclick="closeProductsModal()" class="text-white hover:bg-white/20 rounded-full p-2">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contenido del Modal -->
+            <div class="p-6 overflow-y-auto max-h-[70vh]">
+                <div id="productsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Los productos se cargarÃ¡n aquÃ­ dinÃ¡micamente -->
+                </div>
+
+                <!-- BotÃ³n de WhatsApp -->
+                <div class="mt-8 text-center">
+                    <a href="https://wa.me/524772233286" target="_blank" class="inline-flex items-center bg-green-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 transition-colors shadow-lg">
+                        <i class="fab fa-whatsapp text-xl mr-3"></i>
+                        Contactar para mÃ¡s informaciÃ³n
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/524772233286" target="_blank" class="fixed bottom-6 right-24 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-40">
+        <i class="fab fa-whatsapp text-xl"></i>
+    </a>
+
+     <script src="app.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9777e35966ea66d1',t:'MTc1NjU5NDY1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+
