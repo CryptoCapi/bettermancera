@@ -1,0 +1,253 @@
+{
+  "betterware_op_2_2025": {
+    "vigencia": "Semana 27 a 53 de 2025 (México)",
+    "actualizacion": "auto",
+    "definiciones": {
+      "PB": "Punto Betterware. 1 PB = 1 MXN a precio catálogo en compras calificadas.",
+      "compra_inicial": "Primer pedido calificado del participante.",
+      "compras_netas": "Compras menos devoluciones registradas y pagadas.",
+      "recluta": "Asociado Nuevo con compra inicial calificada.",
+      "reactivacion": "> 6 meses inactivo con compra inicial calificada."
+    },
+    "programas": [
+      {
+        "categoria": "Asociados",
+        "nombre": "Comienza ganando en grande",
+        "objetivo": "Bonos en PB durante tus primeras 6 semanas.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Asociados nuevos (primeras 6 semanas)",
+        "periodicidad": "Semanal",
+        "metas": {
+          "otros": "Metas según tablas del folleto (semanas 1–6)"
+        },
+        "beneficios": {
+          "tipo": "Bono en PB",
+          "monto": "según tabla"
+        },
+        "condiciones": [
+          "Aplica a nuevas altas durante sus primeras 6 semanas",
+          "Otorgamiento conforme a tablas del folleto"
+        ]
+      },
+      {
+        "categoria": "Asociados",
+        "nombre": "Descuento en todas tus compras",
+        "objetivo": "Obtén descuento directo por membresía activa.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Asociados con membresía activa",
+        "periodicidad": "Por pedido",
+        "metas": {
+          "otros": "Membresía activa del Asociado o Distribuidor con reclutas activos"
+        },
+        "beneficios": {
+          "tipo": "Descuento",
+          "monto": "24% Asociado / 26% si su Distribuidor ingresa Nuevos Asociados"
+        },
+        "condiciones": [
+          "Aplica sobre valor sin IVA",
+          "Sujeto a políticas vigentes"
+        ]
+      },
+      {
+        "categoria": "Asociados",
+        "nombre": "Un Punto Betterware por cada Peso",
+        "objetivo": "Gana PB por tus compras a precio catálogo.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Asociados",
+        "periodicidad": "Por pedido",
+        "metas": {
+          "ventas": ">= 300 MXN por pedido"
+        },
+        "beneficios": {
+          "tipo": "Acumulación PB",
+          "monto": "1 PB por cada 1 MXN"
+        },
+        "condiciones": [
+          "Compra mínima por pedido de 300 MXN a precio catálogo",
+          "No aplica sobre producto no comisionable"
+        ]
+      },
+      {
+        "categoria": "Asociados",
+        "nombre": "Asociado VIP",
+        "objetivo": "Reconocimiento y beneficios por compra frecuente.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Asociados frecuentes",
+        "periodicidad": "Catálogo",
+        "metas": {
+          "otros": "Criterios internos de frecuencia (empresa puede actualizarlos)"
+        },
+        "beneficios": {
+          "tipo": "Reconocimientos y acceso",
+          "monto": "logística preferente y eventos"
+        },
+        "condiciones": [
+          "Beneficios sujetos a actualización por la empresa"
+        ]
+      },
+      {
+        "categoria": "Asociados",
+        "nombre": "Gana más por comprar cada semana (Producto a Precio de Regalo)",
+        "objetivo": "Acumula puntos semanales para elegir 1 producto a precio especial.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Asociados",
+        "periodicidad": "Semanal / por catálogo",
+        "metas": {
+          "ventas": "Montos semanales acumulables"
+        },
+        "beneficios": {
+          "tipo": "Producto a precio especial",
+          "monto": "Tope aprox. por catálogo: $1,850 (5 semanas) / $1,350 (4 semanas) MXN"
+        },
+        "condiciones": [
+          "Acumulación semanal; canje al final del catálogo",
+          "Sujeto a disponibilidad y precio de regalo"
+        ]
+      },
+      {
+        "categoria": "Asociados",
+        "nombre": "Velocímetro (bono semanal)",
+        "objetivo": "Acumula puntos semanales por compras.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Asociados",
+        "periodicidad": "Semanal",
+        "metas": {
+          "ventas": ">= 600 MXN por semana"
+        },
+        "beneficios": {
+          "tipo": "Acumulación",
+          "monto": "PB conforme a niveles del velocímetro"
+        }
+      },
+      {
+        "categoria": "Asociados",
+        "nombre": "¡Acelera el Velocímetro!",
+        "objetivo": "Bonificación adicional en PB por invitar Asociados Nuevos.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Asociados",
+        "periodicidad": "Por catálogo",
+        "metas": {
+          "patrocinios": ">= 1 Asociado Nuevo/React. (>6 meses) con compra inicial >= 600 MXN y CURP válida"
+        },
+        "beneficios": {
+          "tipo": "Bonificación PB",
+          "monto": "al cierre según acumulado (doble en mismo catálogo)"
+        }
+      },
+
+      { "categoria": "Distribuidores", "nombre": "Arranca y Gana (Bienvenida Distribuidores)",
+        "objetivo": "Bonos de bienvenida por tus primeras compras y reclutas.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Distribuidores nuevos (primeras 6 semanas)",
+        "periodicidad": "Semanal / 6 semanas",
+        "metas": {"ventas": "Compra inicial >= 2,500 MXN; acumulado 10,000 MXN en 6 semanas", "patrocinios": ">= 4 Asociados Nuevos con compra"},
+        "beneficios": {"tipo": "Bonos en PB", "monto": "otorgados al cierre de la 6ª semana"}
+      },
+      { "categoria": "Distribuidores", "nombre": "Bono por Asociados Nuevos cada Catálogo",
+        "objetivo": "Bonos por Reclutas/Referidos/Reactivaciones activos.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Distribuidores activos",
+        "periodicidad": "Por catálogo",
+        "metas": {"patrocinios": "Compra inicial del Asociado Nuevo >= 600 MXN y CURP válida"},
+        "beneficios": {"tipo": "Bono adicional", "monto": "5,000 PB por cada Asociado que se mantenga activo en el siguiente catálogo (>=600 MXN)"}
+      },
+      { "categoria": "Distribuidores", "nombre": "Descuento por las compras de tu grupo",
+        "objetivo": "Descuento según compras del grupo por catálogo.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Distribuidores",
+        "periodicidad": "Por catálogo (aplica al siguiente)",
+        "metas": {"otros": "Base de Descuento = depósitos sin IVA menos gastos y producto no comisionable"},
+        "beneficios": {"tipo": "Descuento", "monto": "según compras propias + Asociados"},
+        "condiciones": ["Aplica retención de ISR", "Consulta Reporte de Descuentos en Betterware+ (martes)"]
+      },
+      { "categoria": "Distribuidores", "nombre": "Bono por las Compras Netas de tu Grupo",
+        "objetivo": "% de PB semanal según nivel del Plan de Desarrollo.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Distribuidores",
+        "periodicidad": "Semanal",
+        "metas": {"ventas": "Compra mínima propia semanal >= 2,500 MXN"},
+        "beneficios": {"tipo": "% sobre PB", "monto": "de compras netas pagadas del grupo"}
+      },
+      { "categoria": "Distribuidores", "nombre": "Plan de Desarrollo",
+        "objetivo": "Clasificación y beneficios por niveles.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Distribuidores",
+        "periodicidad": "Semanal/Catálogo",
+        "metas": {"ventas": "Pedido mínimo semanal 2,500 MXN; descuento por compras de grupo"}
+      },
+      { "categoria": "Distribuidores", "nombre": "Haz Linaje y Gana Más",
+        "objetivo": "Bonos para la Madre por desempeño del Hijo.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Distribuidores con Hijos",
+        "periodicidad": "En la 6ª semana del Hijo",
+        "metas": {"ventas": "Primer pedido del Hijo >= 2,500 MXN; acumulado 10,000 MXN en 6 semanas", "patrocinios": ">= 4 Asociados Nuevos del Hijo en 6 semanas"},
+        "beneficios": {"tipo": "Bonos en PB", "monto": "al cierre de la 6ª semana; sin saldos vencidos"}
+      },
+      { "categoria": "Distribuidores", "nombre": "Descuento y Puntos por tu Linaje",
+        "objetivo": "Descuento al siguiente catálogo y % sobre PB del linaje.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Distribuidores con linaje",
+        "periodicidad": "Por catálogo / semanal",
+        "metas": {"otros": "Debes comprar y depositar cada semana para ganar descuento"},
+        "beneficios": {"tipo": "Descuento + % PB", "monto": "según compras netas del linaje"},
+        "condiciones": ["Mantén tu membresía para conservar tu linaje"]
+      },
+      { "categoria": "Círculos", "nombre": "Círculo del Presidente (CP)",
+        "objetivo": "Clasificar como Líder o Máster con Hijos clasificados.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Distribuidores Líder/Máster",
+        "periodicidad": "Por catálogo",
+        "metas": {"otros": ">= 10 Hijos Distribuidores clasificados + compras acumuladas según tabla"},
+        "beneficios": {"tipo": "Beneficios de liderazgo", "monto": "Convención, Viajes y eventos"}
+      },
+      { "categoria": "Círculos", "nombre": "Círculo de Círculos",
+        "objetivo": "Descuento adicional por linaje CP.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Distribuidores en CP",
+        "periodicidad": "Por catálogo",
+        "metas": {"otros": "Según número de Hijos CP y clasificados"},
+        "beneficios": {"tipo": "Descuento adicional", "monto": "según tabla del folleto"}
+      },
+      { "categoria": "Círculos", "nombre": "Círculo Diamante (auto y viajes)",
+        "objetivo": "Cerrar como Círculo Diamante 3 catálogos del trimestre.",
+        "vigencia": "Op. 2-2025",
+        "participantes": "Distribuidores en CP",
+        "periodicidad": "Trimestral (3 catálogos)",
+        "metas": {"otros": "Durante 3 meses tener 8+ Hijos dentro del CP y cerrar como Círculo Diamante"},
+        "beneficios": {"tipo": "Auto/Viajes", "monto": "según reglas del programa"}
+      }
+    ],
+    "premios": [
+      {"categoria": "Canje PB", "clasificacion": "A", "premio": "Premios clasificación A", "requisito": "Canje con PB suficientes", "entrega": "6 semanas (garantía)", "flete": "500 MXN", "restricciones": "Flete pagado a transportista"},
+      {"categoria": "Canje PB", "clasificacion": "B", "premio": "Premios clasificación B", "requisito": "Canje con PB suficientes", "entrega": "6 semanas (garantía)", "flete": "300 MXN", "restricciones": "Flete pagado a transportista"},
+      {"categoria": "Canje PB", "clasificacion": "C", "premio": "Premios clasificación C", "requisito": "Canje con PB suficientes", "entrega": "3 semanas (10% PB si no se cumple)", "flete": "90 MXN", "restricciones": "Bonificación 10% PB por retraso"},
+      {"categoria": "Canje PB", "clasificacion": "D", "premio": "Premios clasificación D", "requisito": "Canje con PB suficientes", "entrega": "Inmediato (sin garantía)", "flete": "0 MXN", "restricciones": "Sin bonificación"},
+      {"categoria": "Canje PB", "clasificacion": "F", "premio": "Premios clasificación F", "requisito": "Canje con PB suficientes", "entrega": "Garantía directo con proveedor", "flete": "0 MXN", "restricciones": "Condiciones del proveedor"}
+    ],
+    "canje": {
+      "horario": "Lun-Jue 24h, Vie hasta 16:00 (centro)",
+      "requisitos": [
+        "Acompañar con pedido: Asociado 600 MXN / Distribuidor 2,500 MXN",
+        "Contar con PB suficientes"
+      ],
+      "distribuidores": [
+        "Sin saldos vencidos (>=21 días)",
+        "No estar como No Clasificado",
+        "Si es nuevo, ya haber clasificado"
+      ],
+      "monitoreo": "Betterware+ → Consultas → Vistazo → Canjes"
+    },
+    "pb_reglas": {
+      "asociados": "PB no vencen si mantienes membresía activa",
+      "distribuidores": "PB vencen en 1 año; aviso con 1 catálogo de anticipación"
+    },
+    "terminos_y_condiciones_generales": [
+      "No acumulable con otras promociones salvo indicación",
+      "Sujeto a cambios sin previo aviso",
+      "Hasta agotar existencias en premios y productos a precio de regalo",
+      "Montos en MXN; PB conforme a bases vigentes",
+      "Cortes y vigencias según calendario del catálogo",
+      "Devoluciones, empates y casos especiales conforme a políticas Betterware"
+    ]
+  }
+}
