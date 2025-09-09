@@ -129,7 +129,7 @@
                     <div class="w-20 h-20 bg-gradient-to-r from-betterware-blue to-betterware-mint rounded-full flex items-center justify-center mx-auto mb-4">
                          <img src="images\carlos.jpeg" alt="Carlos Fernando" class="w-20 h-20 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"> 
                     </div>
-                    <h3 class="text-xl font-bold text-betterware-dark mb-2">Carlos Fernando Mancera GÃ³mez</h3>
+                    <h3 class="text-xl font-bold text-betterware-dark mb-2">Carlos Fernando Mancera Martinez</h3>
                     <p class="text-gray-600 mb-4">Distribuidor Autorizado</p>
                     <p class="text-sm text-gray-600">Experto en productos para el hogar con mÃ¡s de 5 aÃ±os de experiencia ayudando a familias a mejorar su calidad de vida.</p>
                     
@@ -172,7 +172,7 @@
 
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div id="organizacion" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div id="organizacion" data-video-youtube="gT0gvLPXosg" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                     <!-- Espacio para imagen de categorÃ­a -->
                     <div class="bg-gradient-to-br from-blue-400 to-blue-600 h-48 flex items-center justify-center relative">
                        <img src="https://i.ytimg.com/vi/q6mlenhz50Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCYXC1P2cx3ebLkwjX5alrrTQ25YA"alt="Productos de OrganizaciÃ³n" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
@@ -181,13 +181,13 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-betterware-dark mb-3">OrganizaciÃ³n</h3>
                         <p class="text-gray-600 mb-4">Cajas, contenedores y organizadores que transforman cualquier espacio en un lugar ordenado y funcional.</p>
-                        <button onclick="showProducts('organizacion')" class="text-betterware-blue font-semibold hover:text-betterware-mint transition-colors">
+                        <button onclick="openCategoryVideo('organizacion')" class="text-betterware-blue font-semibold hover:text-betterware-mint transition-colors">
                             Ver productos <i class="fas fa-arrow-right ml-1"></i>
                         </button>
                     </div>
                 </div>
 
-                <div id="cocina" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div id="cocina" data-video-youtube="d42n81Ox5dA" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                     <!-- Espacio para imagen de categorÃ­a -->
                     <div class="bg-gradient-to-br from-orange-400 to-red-500 h-48 flex items-center justify-center relative">
                         <img src="https://cdn.shopify.com/s/files/1/0853/3114/9100/files/5627-Web_Septiembre_2025..jpg?v=1756470372"alt="Productos de Cocina" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"> 
@@ -196,13 +196,13 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-betterware-dark mb-3">Cocina</h3>
                         <p class="text-gray-600 mb-4">Utensilios innovadores que hacen que cocinar sea mÃ¡s fÃ¡cil, rÃ¡pido y divertido para toda la familia.</p>
-                        <button onclick="showProducts('cocina')" class="text-betterware-blue font-semibold hover:text-betterware-mint transition-colors">
+                        <button onclick="openCategoryVideo('cocina')" class="text-betterware-blue font-semibold hover:text-betterware-mint transition-colors">
                             Ver productos <i class="fas fa-arrow-right ml-1"></i>
                         </button>
                     </div>
                 </div>
 
-                <div id="limpieza" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div id="limpieza" data-video-youtube="4dMQd3wRWcY" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                     <!-- Espacio para imagen de categorÃ­a -->
                     <div class="bg-gradient-to-br from-green-400 to-teal-500 h-48 flex items-center justify-center relative">
                          <img src="https://i.ytimg.com/vi/4dMQd3wRWcY/maxresdefault.jpg"
@@ -212,7 +212,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-betterware-dark mb-3">Limpieza</h3>
                         <p class="text-gray-600 mb-4">Productos de limpieza eficaces y herramientas que mantienen tu hogar impecable sin esfuerzo.</p>
-                        <button onclick="showProducts('limpieza')" class="text-betterware-blue font-semibold hover:text-betterware-mint transition-colors">
+                        <button onclick="openCategoryVideo('limpieza')" class="text-betterware-blue font-semibold hover:text-betterware-mint transition-colors">
                             Ver productos <i class="fas fa-arrow-right ml-1"></i>
                         </button>
                     </div>
@@ -558,6 +558,23 @@
         </div>
     </div>
 
+    <!-- Modal de Video de Categoría -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl w-full max-w-[420px] md:max-w-[480px] overflow-hidden shadow-2xl">
+            <div class="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-betterware-blue to-betterware-mint text-white">
+                <h3 id="videoTitle" class="font-semibold">Video</h3>
+                <button onclick="closeVideoModal()" class="p-2 hover:bg-white/20 rounded-full">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-3">
+                <div class="w-full aspect-[9/16] bg-black rounded-xl overflow-hidden">
+                    <div id="videoContainer" class="w-full h-full"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/524772233286" target="_blank" class="fixed bottom-6 right-24 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-40">
         <i class="fab fa-whatsapp text-xl"></i>
@@ -566,5 +583,3 @@
      <script src="app.js"></script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9777e35966ea66d1',t:'MTc1NjU5NDY1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
-
