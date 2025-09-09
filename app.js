@@ -1,4 +1,4 @@
-﻿// Fallback app.js to satisfy <script src="app.js"> and define required globals
+// Fallback app.js to satisfy <script src="app.js"> and define required globals
 // This duplicates minimal functionality so inline onclick handlers stop erroring.
 
 (function () {
@@ -97,6 +97,90 @@
     };
   }
 
+  // Mobile hamburger menu toggle
+  if (typeof window.toggleMenu !== 'function') {
+    window.toggleMenu = function () {
+      try {
+        const menu = document.getElementById('mobileMenu');
+        if (!menu) return console.warn('toggleMenu: #mobileMenu not found');
+        menu.classList.toggle('hidden');
+      } catch (e) {
+        console.warn('toggleMenu error (app.js):', e);
+      }
+    };
+  }
+
+  // Video modal for category buttons
+  if (typeof window.openCategoryVideo !== 'function') {
+    window.openCategoryVideo = function (categoryId) {
+      try {
+        const host = document.getElementById(categoryId);
+        const youtubeId = host && host.dataset ? (host.dataset.videoYoutube || '').trim() : '';
+        const mp4Url = host && host.dataset ? (host.dataset.videoUrl || '').trim() : '';
+
+        const modal = document.getElementById('videoModal');
+        const container = document.getElementById('videoContainer');
+        const title = document.getElementById('videoTitle');
+
+        if (!modal || !container) return;
+
+        const titles = { organizacion: 'Organización', cocina: 'Cocina', limpieza: 'Limpieza' };
+        if (title) title.textContent = titles[categoryId] || 'Video';
+
+        // Clear previous content
+        container.innerHTML = '';
+
+        let node = null;
+        if (mp4Url) {
+          node = document.createElement('video');
+          node.src = mp4Url;
+          node.controls = true;
+          node.playsInline = true;
+          node.className = 'w-full h-full object-cover';
+        } else if (youtubeId) {
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(youtubeId)}?autoplay=1&playsinline=1&modestbranding=1&rel=0`;
+          iframe.className = 'w-full h-full';
+          iframe.frameBorder = '0';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+          iframe.allowFullscreen = true;
+          node = iframe;
+        } else {
+          const msg = document.createElement('div');
+          msg.className = 'text-center text-gray-600 p-6';
+          msg.textContent = 'Video no disponible para esta categoría.';
+          node = msg;
+        }
+
+        container.appendChild(node);
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } catch (e) {
+        console.warn('openCategoryVideo error (app.js):', e);
+      }
+    };
+  }
+
+  if (typeof window.closeVideoModal !== 'function') {
+    window.closeVideoModal = function () {
+      try {
+        const modal = document.getElementById('videoModal');
+        const container = document.getElementById('videoContainer');
+        if (modal) modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+        if (container) {
+          // Stop playback by clearing the container (also refreshes iframe src)
+          container.querySelectorAll('iframe').forEach(f => {
+            try { f.src = f.src; } catch (_) {}
+          });
+          container.innerHTML = '';
+        }
+      } catch (e) {
+        console.warn('closeVideoModal error (app.js):', e);
+      }
+    };
+  }
+
   if (typeof window.downloadCatalog !== 'function') {
     window.downloadCatalog = function () {
       try {
@@ -127,6 +211,28 @@
           }
         });
       });
+
+      // Close mobile menu after navigating
+      try {
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+          link.addEventListener('click', () => {
+            const m = document.getElementById('mobileMenu');
+            if (m) m.classList.add('hidden');
+          });
+        });
+      } catch (_) {}
+
+      // Close video modal when clicking the backdrop
+      const vm = document.getElementById('videoModal');
+      if (vm) {
+        vm.addEventListener('click', (e) => {
+          if (e.target === vm) {
+            if (typeof window.closeVideoModal === 'function') {
+              window.closeVideoModal();
+            }
+          }
+        });
+      }
 
       // Add missing hero button: Catálogo de Oportunidades
       try {
